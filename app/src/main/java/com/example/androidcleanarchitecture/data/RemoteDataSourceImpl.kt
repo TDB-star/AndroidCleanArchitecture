@@ -1,6 +1,8 @@
 package com.example.androidcleanarchitecture.data
 
-class RemoteDataSourceImpl(
+import javax.inject.Inject
+
+class RemoteDataSourceImpl @Inject constructor(
     private val apiService: ApiService
 ): RemoteDataSource {
     override fun method() {

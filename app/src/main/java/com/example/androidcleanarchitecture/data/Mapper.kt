@@ -1,6 +1,8 @@
 package com.example.androidcleanarchitecture.data
 
-class Mapper {
+import javax.inject.Inject
+
+class Mapper @Inject constructor(){
 
     fun map() {
 

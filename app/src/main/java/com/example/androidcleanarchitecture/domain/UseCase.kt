@@ -1,9 +1,12 @@
 package com.example.androidcleanarchitecture.domain
 
-class UseCase(
+import android.util.Log
+import javax.inject.Inject
+
+class UseCase @Inject constructor(
     private val repository: Repository
 ) {
     operator fun invoke() {
-        TODO("Not yet implemented")
+        Log.d("Tag", "USE_CASE")
     }
 }

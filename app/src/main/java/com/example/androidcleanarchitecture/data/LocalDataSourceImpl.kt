@@ -1,6 +1,8 @@
 package com.example.androidcleanarchitecture.data
 
-class LocalDataSourceImpl(
+import javax.inject.Inject
+
+class LocalDataSourceImpl @Inject constructor(
     private val dataBase: DataBase
 ): LocalDataSource {
     override fun method() {
