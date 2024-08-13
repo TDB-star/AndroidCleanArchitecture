@@ -6,6 +6,6 @@ class RemoteDataSourceImpl @Inject constructor(
     private val apiService: ApiService
 ): RemoteDataSource {
     override fun method() {
-        TODO("Not yet implemented")
+        apiService.method()
     }
 }

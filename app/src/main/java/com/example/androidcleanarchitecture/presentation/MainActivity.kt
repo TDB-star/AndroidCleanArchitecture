@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.example.androidcleanarchitecture.R
+import com.example.androidcleanarchitecture.di.ContextModule
 import com.example.androidcleanarchitecture.di.DaggerApplicationComponent
 import javax.inject.Inject
 
@@ -13,7 +14,12 @@ class MainActivity : AppCompatActivity() {
 
     @Inject
     lateinit var viewModel: ViewModel
-    private val component = DaggerApplicationComponent.create()
+
+    private val component by lazy {
+        DaggerApplicationComponent.builder()
+            .contextModule(ContextModule(application))
+            .build()
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         component.inject(this)

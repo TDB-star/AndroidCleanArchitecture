@@ -6,6 +6,6 @@ class LocalDataSourceImpl @Inject constructor(
     private val dataBase: DataBase
 ): LocalDataSource {
     override fun method() {
-        TODO("Not yet implemented")
+        dataBase.method()
     }
 }

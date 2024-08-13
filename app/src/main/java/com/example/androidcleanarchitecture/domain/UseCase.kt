@@ -7,6 +7,6 @@ class UseCase @Inject constructor(
     private val repository: Repository
 ) {
     operator fun invoke() {
-        Log.d("Tag", "USE_CASE")
+        repository.method()
     }
 }

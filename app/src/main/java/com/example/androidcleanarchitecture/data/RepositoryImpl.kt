@@ -10,6 +10,8 @@ class RepositoryImpl @Inject constructor(
 ): Repository {
 
     override fun method() {
-        TODO("Not yet implemented")
+        mapper.map()
+        localDataSource.method()
+        remoteDataSource.method()
     }
 }

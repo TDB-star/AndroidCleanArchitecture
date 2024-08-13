@@ -1,15 +1,19 @@
 package com.example.androidcleanarchitecture.data
 
+import android.content.Context
 import android.util.Log
+import com.example.androidcleanarchitecture.R
 import javax.inject.Inject
 
-class ApiService @Inject constructor() {
+class ApiService @Inject constructor(
+    private val context: Context
+) {
 
     fun method() {
-        Log.d(LOG_TAG, "ApiService")
+        Log.d(LOG_TAG, "ApiService ${context.getString(R.string.app_name)}")
     }
 
     companion object {
-        private const val LOG_TAG = "API_SERVICE_TEST"
+        private const val LOG_TAG = "TEST"
     }
 }
