@@ -4,9 +4,8 @@ import android.content.Context
 import android.util.Log
 import com.example.androidcleanarchitecture.R
 import javax.inject.Inject
-import javax.inject.Singleton
 
-@Singleton
+
 class ApiService @Inject constructor(
     private val context: Context
 ) {

@@ -1,5 +1,6 @@
 package com.example.androidcleanarchitecture.data
 
+import com.example.androidcleanarchitecture.di.ApplicationScope
 import com.example.androidcleanarchitecture.domain.Repository
 import javax.inject.Inject
 
