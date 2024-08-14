@@ -5,6 +5,7 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import com.example.androidcleanarchitecture.ApplicationTest
 import com.example.androidcleanarchitecture.R
 import com.example.androidcleanarchitecture.di.DaggerApplicationComponent
 import javax.inject.Inject
@@ -15,8 +16,7 @@ class MainActivity : AppCompatActivity() {
     lateinit var viewModel: ViewModel
 
     private val component by lazy {
-        DaggerApplicationComponent.factory()
-            .create(application, System.currentTimeMillis())
+        (application as ApplicationTest).component
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {

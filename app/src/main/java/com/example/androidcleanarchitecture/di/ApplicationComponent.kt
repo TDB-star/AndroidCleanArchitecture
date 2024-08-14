@@ -5,8 +5,9 @@ import com.example.androidcleanarchitecture.presentation.MainActivity
 import dagger.Binds
 import dagger.BindsInstance
 import dagger.Component
+import javax.inject.Singleton
 
-
+@Singleton
 @Component(modules = [DataModule::class, DomainModule::class])
 interface ApplicationComponent {
     fun inject(activity: MainActivity)
