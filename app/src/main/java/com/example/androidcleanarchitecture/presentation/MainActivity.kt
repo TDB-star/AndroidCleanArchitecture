@@ -6,7 +6,6 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.example.androidcleanarchitecture.R
-import com.example.androidcleanarchitecture.di.ContextModule
 import com.example.androidcleanarchitecture.di.DaggerApplicationComponent
 import javax.inject.Inject
 
@@ -17,7 +16,7 @@ class MainActivity : AppCompatActivity() {
 
     private val component by lazy {
         DaggerApplicationComponent.builder()
-            .contextModule(ContextModule(application))
+            .context(application)
             .build()
     }
 
